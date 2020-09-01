@@ -44,7 +44,7 @@ const participantSchema = new mongoose.Schema(
     },
     imageMedia: [
       {
-        type: "String",
+        type: String,
       },
     ],
     videoMedia: [
