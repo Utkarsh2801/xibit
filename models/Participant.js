@@ -2,46 +2,23 @@ const mongoose = require("mongoose");
 
 const participantSchema = new mongoose.Schema(
   {
-    firstname: {
-      type: String,
-      required: true,
-      trim: true,
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
     },
-    lastname: {
-      type: String,
-      trim: true,
+    eventId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Event",
     },
-    email: {
-      type: String,
-      trim: true,
-      required: true,
-      unique: true,
-    },
-    password: {
-      type: String,
-      required: true,
-    },
-    phone: {
-      type: String,
-      trim: true,
-    },
-    isVerified: {
-      type: Boolean,
-      default: false,
-    },
-    events: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Event",
-      },
-    ],
     description: {
       type: String,
       default: null,
     },
-    descriptionFile: {
-      type: String,
-    },
+    descriptionFiles: [
+      {
+        type: String,
+      },
+    ],
     imageMedia: [
       {
         type: String,

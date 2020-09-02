@@ -4,7 +4,7 @@ const invitationSchema = new mongoose.Schema(
   {
     eventManager: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "EventManager",
+      ref: "User",
     },
     event: {
       type: mongoose.Schema.Types.ObjectId,
@@ -12,7 +12,7 @@ const invitationSchema = new mongoose.Schema(
     },
     judge: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Judge",
+      ref: "User",
     },
     isAccepted: {
       type: Boolean,

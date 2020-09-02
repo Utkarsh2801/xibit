@@ -8,7 +8,7 @@ const eventSchema = new mongoose.Schema({
   },
   eventManager: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "EventManager",
+    ref: "User",
   },
   type: {
     type: String,
@@ -56,13 +56,13 @@ const eventSchema = new mongoose.Schema({
   judges: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Judge",
+      ref: "User",
     },
   ],
   participants: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Participant",
+      ref: "User",
     },
   ],
   startDate: {

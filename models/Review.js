@@ -8,11 +8,11 @@ const reviewSchema = new mongoose.Schema(
     },
     participant: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Participant",
+      ref: "User",
     },
     judge: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Judge",
+      ref: "User",
     },
     score: {
       type: String,
